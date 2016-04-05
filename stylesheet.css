@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body, html {
+    height: 100%;
+    min-height: 100%;
+    background-color: lightblue;
+    font-family: sans-serif;
+}
+header {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    background-color: white;
+    height: 5em;
+    box-shadow: 0 0.1em 0.5em rgba(10,20,50,.5);
+}
+header > h1 {
+    font-family: 'Revalia', cursive;
+    padding-top: 0.9em;
+    color: #0b6ea7;
+    font-size: 1.5em;
+    text-align: center;
+}
+#introPanel {
+    margin-top: 5em;
+    width: 100%;
+   /*height: 100%;*/
+    height: calc(100vh - 5em);
+    background: url("images/worldBG.jpg") no-repeat top;
+    background-position-x: 10%;
+    background-size: cover; 
+    color: white;
+    font-weight: bold;
+}
+#introPanel h2 {
+    position: absolute;
+    top: 5em;
+    right: 1em;
+    font-size: 2em;
+    /*padding-top: 5em;
+    padding-right: 1em;*/
+    padding: 0.5em;
+    text-align: right;
+    background-color: rgba(158,214,215,0.6);
+}
+
+#introPanel h4 {
+    position: absolute;
+    bottom: 3em;
+    padding-top: 5em;
+    font-size: 1.5em;
+    width: 100%;
+    text-align: center;
+}
+
+#introPanel a {
+    text-decoration: none;
+    position: absolute;
+    /*left: calc(50vw);*/
+    left: 45vw;
+    bottom: 0em;
+    font-size: 3em;
+    font-weight: bold;
+    color: rgba(0,36,51,1);
+}
+#introPanel a:hover {
+    color: rgba(200,200,200,0.8)
+}
+.anchor {
+    visibility: hidden;
+}
+#fccPanel {
+   width: 100%;
+   height: 100%;
+    
+    background: url("images/codeBG.jpg") no-repeat top;
+    background-position-x: 15%;
+    background-size: cover;
+}
+
+@media all and (min-width: 700px) {
+    #introPanel a {
+        left: calc(50vw - 1em);
+    }
+}
