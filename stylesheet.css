@@ -14,7 +14,7 @@ header {
     left:0;
     width: 100%;
     background-color: white;
-    height: 5em;
+    height: 5.5em;
     box-shadow: 0 0.1em 0.5em rgba(10,20,50,.5);
 }
 header > h1 {
@@ -24,6 +24,17 @@ header > h1 {
     font-size: 1.5em;
     text-align: center;
 }
+header > p {
+    font-family: 'Revalia', cursive;
+    text-align: center;
+    padding-top: 0.8em;
+}
+header > p > a {
+    text-decoration: none;
+    color:red;
+    font-weight: bold;
+}
+
 #introPanel {
     margin-top: 5em;
     width: 100%;
@@ -73,16 +84,43 @@ header > h1 {
     visibility: hidden;
 }
 #fccPanel {
+    
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; 
+    padding-top: 8%;
+    padding-bottom: 8%;
    width: 100%;
    height: 100%;
-    
-    background: url("images/codeBG.jpg") no-repeat top;
-    background-position-x: 15%;
+    background: url("images/code-944499_1280_edit03.png") no-repeat top;
+    background-position-x: 5%;
     background-size: cover;
 }
+#fccStatus {
+    border-radius: 0.5em;
+    height: 100%;
+    width: 84%;
+    margin: auto;
+    background-color: rgba(200,200,214,0.8);
+}
 
-@media all and (min-width: 700px) {
+@media all and (min-width: 650px) {
     #introPanel a {
         left: calc(50vw - 1em);
+    }
+    header {
+        height: 5em;
+    }
+    header h1 {
+        text-align: left;
+        padding-left: 1em;
+    }
+    header > p {
+        position: absolute;
+        top: 1em;
+        right: 1em;
+    }
+    #fccStatus {
+        width: 50%;
     }
 }
