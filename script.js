@@ -15,8 +15,8 @@ $(document).ready(function() {
         $.getJSON(fccURL, function(json){
            if (json.stream !== null) {
                var fccLink = '<h2><a href="https://www.twitch.tv/freecodecamp">FreeCodeCamp</a></h2>'
-                var streamThumb = "onlinestream-preview.jpg";//json.stream.preview.large;
-                var thumbDiv = '<div style="background-image: url(' + streamThumb + ')"></div>';
+                var streamThumb = "images/streamMissingThumb.jpg";//json.stream.preview.large;
+                var thumbDiv = '<div style="background-image: url(' + streamThumb + ')"><a href="' + json. stream.channel.url + '"><i class="fa fa-play"></i></a></div>';
                 var description = '<p>Currently Streaming: <br>' + json.stream.channel.status + '</p>';
                 
                 
