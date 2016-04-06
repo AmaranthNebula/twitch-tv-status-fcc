@@ -111,18 +111,7 @@ header > p > a:hover {
     background-position-x: 5%;
     background-size: cover;
 }
-#fccPanel > a {
-    text-decoration: none;
-    position: absolute;
-    left: 45vw;
-    bottom: -11.5em;
-    font-size: 3em;
-    font-weight: bold;
-    color: rgba(0,36,51,1);
-}
-#fccPanel > a:hover {
-    color: rgba(200,200,200,0.8)
-}
+
 
 #fccStatus {
     -moz-box-sizing: border-box;
@@ -203,15 +192,13 @@ header > p > a:hover {
     -webkit-jusitify-content: space-around;
     justify-content: space-around;
     width: 100%;
-    padding-top: 3em;
-    padding-bottom: 3em;
     background-color: #013f7c;
 }
 .userPanel {
     background-color: rgba(255,255,255, 0.9);
     border-radius: 0.5em;
     height: 23em;
-    width: 13em;
+    width: 15em;
     margin: 2em;
     padding: 1em;
     text-align: center;
