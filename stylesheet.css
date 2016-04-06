@@ -146,7 +146,7 @@ header > p > a:hover {
     font-size: 1.2em;
 }
 
-#fccStatus > div{
+.videoThumb{
     background-color: blue;
     background-size: contain;
     background-repeat: no-repeat;
@@ -155,30 +155,28 @@ header > p > a:hover {
     height: 9em;
     text-align: center;
 }
-#fccStatus > div > a {
+.videoThumb > a {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     display: block;
-    /*color: rgba(20,20,20, 0.9);
-    border: 0.15em solid rgba(20,20,20, 0.9);*/
     color: rgba(255,255,255, 0.7);
     border: 2px solid rgba(255,255,255, 0.8);
     height: 9em;
     width: 16em;
 }
-#fccStatus > div > a:hover {
+.videoThumb > a:hover {
      color: rgba(100,100,100,1);
      background-color: rgba(255,2555,255, 0.5);
     border: 2px solid rgba(100,100,100,1);
 }
-#fccStatus > div > a > i {
+.videoThumb > a > i {
     padding-top: 0.55em;
     font-size: 4em;
 }
 
 
-#fccStatus > p {
+.userDesc {
     padding-top: 3em;
     font-weight: bold;
 }
@@ -197,8 +195,8 @@ header > p > a:hover {
 .userPanel {
     background-color: rgba(255,255,255, 0.9);
     border-radius: 0.5em;
-    height: 23em;
-    width: 15em;
+    height: 25em;
+    width: 17em;
     margin: 2em;
     padding: 1em;
     text-align: center;

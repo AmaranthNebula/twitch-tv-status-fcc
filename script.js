@@ -16,8 +16,8 @@ $(document).ready(function() {
            if (json.stream !== null) {
                var fccLink = '<h2><a href="https://www.twitch.tv/freecodecamp">FreeCodeCamp</a></h2>'
                 var streamThumb = "images/streamMissingThumb.jpg";//json.stream.preview.large;
-                var thumbDiv = '<div style="background-image: url(' + streamThumb + ')"><a href="' + json. stream.channel.url + '"><i class="fa fa-play"></i></a></div>';
-                var description = '<p>Currently Streaming: <br>' + json.stream.channel.status + '</p>';
+                var thumbDiv = '<div class="videoThumb" style="background-image: url(' + streamThumb + ')"><a href="' + json. stream.channel.url + '"><i class="fa fa-play"></i></a></div>';
+                var description = '<p class="userDesc">Currently Streaming: <br>' + json.stream.channel.status + '</p>';
                 
                 
                 var content = $("#fccStatus").html(fccLink + thumbDiv + description);
@@ -29,11 +29,11 @@ $(document).ready(function() {
         
     }
     function getUsers() {
-        //CHANGE THIS BACK TO users.length
-       for (var i = 0; i < 1; i++) {
+       for (var i = 0; i < users.length; i++) {
         var userURL = "freecodecamponline.json"; // should be twitchURL + currentUser + twitchURLEnd;
         var currentUser = users[i];
-
+        console.log(currentUser);
+        
         $.getJSON(userURL, function(json) {
             if (json.error !== undefined) {
                 var URL = '<a href="' + twitchLinkURL + currentUser + '">' + currentUser + '</a>';
@@ -48,10 +48,13 @@ $(document).ready(function() {
             }
             else {
                 var URL = '<a href="' + twitchLinkURL + currentUser + '">' + currentUser + '</a>';
-                var content = '<div class="userPanel"><h2 class="available">'+ URL +'</h2><p></p></div>';
+                var streamThumb = "images/streamMissingThumb.jpg";//json.stream.preview.large;
+                var thumbDiv = '<div class="videoThumb" style="background-image: url(' + streamThumb + ')"><a href="' + json. stream.channel.url + '"><i class="fa fa-play"></i></a></div>';
+                var description = '<p class="userDesc">Currently Streaming: <br>' + json.stream.channel.status + '</p>';
                 
+                var content = '<div class="userPanel"><h2 class="available">'+ URL + '</h2>'  + thumbDiv + description + '</div>';
             }
-
+            console.log(URL);
             $("#userContainer").html($("#userContainer").html() + content);
         });
        } // end of for loop
