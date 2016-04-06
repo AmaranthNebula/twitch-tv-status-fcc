@@ -5,10 +5,12 @@
         <link type="image/png" rel="icon" href="images/favicon.png">
         <link type="text/css" rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
         <link href='https://fonts.googleapis.com/css?family=Revalia' rel='stylesheet' type='text/css'>        <link type="text/css" rel="stylesheet" href="stylesheet.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
         <script src="script.js"></script>
         <title>FreeCodeCamp Twitch.tv Status</title>
     </head>
     <body>
+        <noscript>Javascript appears to be disabled. This page requires javascript, please enable it to use this site.</noscript>
         <header>
             <h1>Current Streamers</h1>
             <p>FreeCodeCamp Status: <a href="#fcc">offline</a></p>
@@ -20,13 +22,17 @@
         </div>
         <a id="fcc" class="anchor"></a>
         <div id="fccPanel">
-            <div id="fccStatus"></div>
-        </div>
-        <div id="userContainer">
-
-            <div class="userPanel"></div>
-            
+            <div id="fccStatus">
+                <h2><a href="https://www.twitch.tv/freecodecamp">FreeCodeCamp</a></h2>
+                <p class="noStream">FreeCodeCamp is not currently streaming</p>
+            </div>
+            <a href="#users"<i class="fa fa-angle-down"></i></a>
         </div>
         
+        <a id="users" class="anchor"></a>
+        <div id="userContainer"></div>
+        <footer>
+            <p>Page Created by AmaranthNebula</p>
+        </footer>
     </body>
 </html>
