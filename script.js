@@ -21,7 +21,7 @@ $(document).ready(function() {
     getUsers();
     getFCCData();
     function getFCCData() {
-        var fccURL = twitchURL + "freeCodeCamp" + twitchURLEnd;
+    var fccURL = twitchURL + "freeCodeCamp" + twitchURLEnd;
         $.getJSON(fccURL, function(json){
            if (json.stream !== null) {
                var fccLink = '<h2><a target="_blank" href="https://www.twitch.tv/freecodecamp">FreeCodeCamp</a></h2>'
@@ -54,8 +54,8 @@ $(document).ready(function() {
                                     JSON.stringify(json[i].message).substr(1, json[i].message.length) + '</p></div>';
                 } 
                 else if (json[i].stream === null) {
-                    var URL = '<a target="_blank" class="faded" href="' + twitchLinkURL + currentUser + '">' + currentUser + '</a>';
-                    var content = '<div class="userPanel"><h2>' + URL + 
+                    var URL = '<a target="_blank" href="' + twitchLinkURL + currentUser + '">' + currentUser + '</a>';
+                    var content = '<div class="userPanel"><h2  class="faded">' + URL + 
                         '</h2><p class="unavailable faded">user is not currently streaming</p></div>';
                 }
                 else {

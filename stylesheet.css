@@ -136,11 +136,11 @@ header > p > a:hover {
     
 }
 #fccStatus > h2 > a:hover {
-    color: #555;
+    color: #999;
 }
 
 .noStream {
-    padding-top: 10em;
+    padding-top: 5em;
     font-weight: bold;
     color: #555;
     font-size: 1.2em;
