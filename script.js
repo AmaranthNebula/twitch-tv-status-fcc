@@ -2,7 +2,7 @@ $(document).ready(function() {
     var twitchLinkURL = "https://www.twitch.tv/";
     var twitchURL = "https://api.twitch.tv/kraken/streams/";
     var twitchURLEnd = "?callback=?";
-    var users = ["storbeck", "terakilobyte", "habathcx",
+    var users = ["OgamingSC2", "storbeck", "terakilobyte", "habathcx",
                  "RobotCaleb","thomasballinger","noobs2ninjas",
                  "beohoff","brunofin"];
     //API link format: twitchURL + "username" + twitchURLEnd;
@@ -15,6 +15,7 @@ $(document).ready(function() {
         Promise.resolve($.getJSON(twitchURL + users[5] + twitchURLEnd)),
         Promise.resolve($.getJSON(twitchURL + users[6] + twitchURLEnd)),
         Promise.resolve($.getJSON(twitchURL + users[7] + twitchURLEnd)),
+        Promise.resolve($.getJSON(twitchURL + users[8] + twitchURLEnd))
     ];
 
     
@@ -70,4 +71,20 @@ $(document).ready(function() {
             } // end of for loop
         }); // end of promise function
     } // end of getUsers()
+    
+    
+    // prevent the links from changing the current URL
+    $("#introPanel > a").click(function(e) {
+       e.preventDefault();
+        var fccPanel = document.getElementById("fcc").offsetTop;
+        window.scrollTo(0, fccPanel);                        
+    });
+    
+    $("header > p > a").click(function(e) {
+       e.preventDefault(); 
+       var fccPanel = document.getElementById("fcc").offsetTop;
+       window.scrollTo(0, fccPanel); 
+    });
+    
+    
 });
